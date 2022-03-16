@@ -1,0 +1,35 @@
+{
+  "name": "appfuxion",
+  "version": "1.0.0",
+  "description": "For test BE",
+  "main": "index.js",
+  "scripts": {
+    "migrate:seed": "sequelize-cli db:migrate",
+    "start:dev": "nodemon src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cahyacaa/appFuxion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^4.3.1",
+    "mysql2": "^2.3.2",
+    "randomstring": "^1.2.2",
+    "sequelize": "^6.9.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "bugs": {
+    "url": "https://github.com/cahyacaa/appFuxion/issues"
+  },
+  "homepage": "https://github.com/cahyacaa/appFuxion#readme"
+}
