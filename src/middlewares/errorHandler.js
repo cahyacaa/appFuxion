@@ -8,8 +8,9 @@ module.exports = (err, _req, res, _next) => {
     code = err.code;
     meta = err.data;
   }else {
-    message = 'Unknown Error';
+    message = err.message || 'Unknown Error';
     code = 500;
   }
+  console.error(message, err.stack)
   return res.API.error(message, code, meta);
 };

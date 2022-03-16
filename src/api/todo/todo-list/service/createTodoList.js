@@ -1,5 +1,5 @@
-const HttpError = require('../../../common/create-http-error');
-const TodoListRepository = require('../../../repository/todoList');
+const HttpError = require('../../../../common/create-http-error');
+const TodoListRepository = require('../../../../repository/todoList');
 
 exports.createTodoListService = async(data) => {
     if(!data?.name){

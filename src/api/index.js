@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const todoRoutes = require('./todo-list/routes');
+const todoRoutes = require('./todo');
 
 
 router.get('/ping', (_req, res) => {

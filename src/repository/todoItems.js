@@ -1,16 +1,16 @@
-const { TodoList } = require('../models');
+const { TodoItem } = require('../models');
 
-const TodoListRepository = {
+const TodoItemRepository = {
 
     async findAll() {
-        const result = await TodoList.findAll({
+        const result = await TodoItem.findAll({
             raw: true
         });
         return result;
     },
 
     async findOne(field, params) {
-        const result = await TodoList.findOne({
+        const result = await TodoItem.findOne({
             where: {
                 [field]: params
             },
@@ -20,13 +20,13 @@ const TodoListRepository = {
     },
 
     async create(data) {
-        const result = await TodoList.create(data);
+        const result = await TodoItem.create(data);
         return result.get({ plain: true });
     },
 
 
     async update(id, data) {
-        const result = await TodoList.update(data, {
+        const result = await TodoItem.update(data, {
             where: {
                 id: id
             }
@@ -37,4 +37,4 @@ const TodoListRepository = {
 
 };
 
-module.exports = TodoListRepository;
+module.exports = TodoItemRepository;
