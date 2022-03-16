@@ -1,6 +1,7 @@
 const { editTodoItemsService } = require("../service/editTodoItems");
 const { createTodoItemsService } = require("../service/createTodoItems");
 const { markItemsDone } = require("../service/markDoneItems");
+const { deleteItemsService } = require("../service/deleteItems");
 
 async function addTodoItems(req, res, next) {
     const data = req.body;
@@ -28,9 +29,16 @@ async function markDoneItems(req, res, next) {
     return res.API.success({}, `Success update mark items ${result?.name} to done`);
 }
 
+async function deleteItems(req, res, next) {
+    const id = req.params.id;
+    const result = await deleteItemsService(id);
+    return res.API.success({}, `Success delete items ${result?.name}`);
+}
+
 
 module.exports = {
     addTodoItems,
     editTodoItems,
-    markDoneItems
+    markDoneItems,
+    deleteItems
 };

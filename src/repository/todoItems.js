@@ -34,6 +34,16 @@ const TodoItemRepository = {
         return result;
     },
 
+    async delete(id) {
+        const result = await TodoItem.destroy({
+            where: {
+                id: id
+            }
+        });
+        return result;
+    },
+
+
 
 };
 
