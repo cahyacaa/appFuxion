@@ -22,7 +22,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    taskDone: DataTypes.INTEGER,
+    taskDone: {
+      type:DataTypes.INTEGER, defaultValue: 0
+    },
     isAllDone: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
